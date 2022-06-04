@@ -2,24 +2,17 @@
 #include <algorithm>
 #include <vector>
 #include <list>
-
-
 using namespace std;
-
-bool compareInt(int n1, int n2) {
-
-}
 
 int main()
 {
-    cout << "Hello World!" << endl;
     int countDay = 0;
     list<int> anchous = {3, 4, 3, 1, 2};
     int minElement = 10;
 
     int countMin = 0;
 
-    while (countDay < 10) {
+    while (countDay < 80) {
         list<int>::iterator p = anchous.begin();
         while (p != anchous.end()) {
             if (minElement > *p) {
@@ -31,7 +24,6 @@ int main()
             }
             p++;
         }
-        cout << "min = " << minElement << " " << countMin << endl;
 
         p = anchous.begin();
         if (minElement == 0) {
@@ -57,18 +49,10 @@ int main()
             countDay += minElement;
         }
 
-        cout << "countDay = " << countDay << endl;
-        p = anchous.begin();
-        while (p != anchous.end()) {
-            cout << *p << " ";
-            p++;
-        }
-
-        cout << endl;
         minElement = 10;
         countMin = 0;
     }
 
-   cout << "count anchouses = " << (int) anchous.size() << endl;
+    cout << "count anchouses after 80 days = " << (int) anchous.size() << endl;
     return 0;
 }
